@@ -47,7 +47,7 @@ struct ArrowIndicator: View {
     var body: some View {
         HStack(spacing: 0) {
             playImage
-                .frame(width: animation == 0 ? .zero : Ui.iconWidth)
+                .frame(width: animation == 0 ? 1 : Ui.iconWidth)
                 .scaleEffect(animation)
                 .opacity(animation)
             
@@ -55,7 +55,7 @@ struct ArrowIndicator: View {
                 .frame(width: Ui.iconWidth)
             
             playImage
-                .frame(width: animation == 0 ? Ui.iconWidth : .zero)
+                .frame(width: animation == 0 ? Ui.iconWidth : 1)
                 .scaleEffect(1.0 - animation)
                 .opacity(1.0 - animation)
             
